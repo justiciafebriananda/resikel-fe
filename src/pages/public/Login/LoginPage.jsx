@@ -29,7 +29,8 @@ const LoginPage = () => {
   }, [initialDatabaseName]);
 
   const handleLogin = async (data) => {
-    const baseURL = "http://localhost:5000"; // URL server backend
+    // const baseURL = "http://localhost:5000"; // URL server backend
+    const baseURL = "https://db.airf.my.id"; // URL server backend
     const response = await fetch(`${baseURL}/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },

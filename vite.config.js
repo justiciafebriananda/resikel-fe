@@ -10,7 +10,8 @@ export default defineConfig({
     //   "/api": "http://localhost:5000", //
     // },
     proxy: {
-      "/api": "https://localhost:5000", //
+      // "/api": "http://localhost:5000", //
+      "/api": "https://db.airf.my.id", //
     },
   },
   plugins: [react()],

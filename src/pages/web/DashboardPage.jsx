@@ -38,18 +38,18 @@ const Dashboard = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/tb_area_transaksi_wilayah")
+      .get("https://db.airf.my.id/tb_area_transaksi_wilayah")
       .then((response) => settb_area_transaksi_wilayah(response.data))
       .catch((error) =>
         console.error("Error fetching tb_area_transaksi_wilayah:", error)
       );
     // Fetch data untuk users
     axios
-      .get("http://localhost:5000/users")
+      .get("https://db.airf.my.id/users")
       .then((response) => setUsers(response.data))
       .catch((error) => console.error("Error fetching users:", error));
     axios
-      .get("http://localhost:5000/users/count")
+      .get("https://db.airf.my.id/users/count")
       .then((response) => {
         setTotalusers(response.data.total);
       })
